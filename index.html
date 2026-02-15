@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Movie Review Website</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🎬 Movie Review Hub</h1>
+    <nav>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('movies')">Movies</a>
+        <a href="#" onclick="showPage('reviews')">Reviews</a>
+        <a href="#" onclick="showPage('top')">Top Rated</a>
+        <a href="#" onclick="showPage('trailers')">Trailers</a>
+        <a href="#" onclick="showPage('contact')">Contact</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="page active">
+    <h2>Welcome to Movie Review Hub</h2>
+    <p>Explore latest movies, reviews, and trailers!</p>
+</section>
+
+<!-- MOVIES -->
+<section id="movies" class="page">
+    <h2>Movies</h2>
+
+    <select onchange="filterMovies(this.value)">
+        <option value="all">All Genres</option>
+        <option value="Action">Action</option>
+        <option value="Drama">Drama</option>
+        <option value="Sci-Fi">Sci-Fi</option>
+    </select>
+
+    <div id="movieContainer" class="grid"></div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="page">
+    <h2>Submit Review</h2>
+    <input type="text" id="reviewText" placeholder="Write your review">
+    <div id="stars">
+        <span onclick="rate(1)">★</span>
+        <span onclick="rate(2)">★</span>
+        <span onclick="rate(3)">★</span>
+        <span onclick="rate(4)">★</span>
+        <span onclick="rate(5)">★</span>
+    </div>
+    <button onclick="submitReview()">Submit</button>
+    <ul id="reviewList"></ul>
+</section>
+
+<!-- TOP RATED -->
+<section id="top" class="page">
+    <h2>Top Rated Movies</h2>
+    <div id="topMovies" class="grid"></div>
+</section>
+
+<!-- TRAILERS -->
+<section id="trailers" class="page">
+    <h2>Trailers</h2>
+    <iframe width="300" height="200" src="https://www.youtube.com/embed/EXeTwQWrcwY"></iframe>
+    <iframe width="300" height="200" src="https://www.youtube.com/embed/YoHD9XEInc0"></iframe>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="page">
+    <h2>Contact Us</h2>
+    <input type="text" placeholder="Name"><br><br>
+    <input type="email" placeholder="Email"><br><br>
+    <textarea placeholder="Message"></textarea><br><br>
+    <button>Send</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

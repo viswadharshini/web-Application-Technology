@@ -1,0 +1,72 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #111;
+    color: white;
+}
+
+header {
+    background: #222;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+.page {
+    display: none;
+    padding: 20px;
+}
+
+.active {
+    display: block;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    background: #333;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    background: #444;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#stars span {
+    font-size: 30px;
+    cursor: pointer;
+    color: gray;
+}
+
+#stars span.active {
+    color: gold;
+}
+
+button {
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
